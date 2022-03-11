@@ -1,0 +1,23 @@
+.form-booking {
+  background-color: $color-tangaroa;
+  color: $color-alice-blue;
+}
+
+.form-booking p {
+  font-weight: 500;
+}
+
+.form-booking input {
+  color: $color-tangaroa;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba($color: $color-tangaroa, $alpha: 0.7);
+  }
+}
+
+.form-booking label {
+  font-size: 10px;
+  line-height: 13px;
+}
