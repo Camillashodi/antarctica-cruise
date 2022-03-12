@@ -1,3 +1,53 @@
 .socials__list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.socials__item {
+  margin-left: 23px;
+
+  @include vp-1279 {
+    margin-left: 13px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-right: 13px;
+  }
+}
+
+.socials__link {
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-1279 {
+    padding: 10px;
+  }
+
+  &--fb svg {
+    @include vp-1279 {
+      width: 9px;
+      height: 16px;
+    }
+  }
+
+  &--inst svg {
+    @include vp-1279 {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &--twitter svg {
+    @include vp-1279 {
+      width: 16px;
+      height: 13px;
+    }
+  }
 }

@@ -2,12 +2,53 @@
   font-weight: 500;
   line-height: 20px;
   color: $color-alice-blue;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+  @include vp-1279 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-nav__logo {
+  @include vp-1279 {
+    width: 38px;
+    height: 20px;
+    align-self: center;
+  }
 }
 
 .footer-nav__list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.footer-nav__item {
+  margin-left: 33px;
+
+  @include vp-1279 {
+    margin-left: 23px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
 }
 
 .footer-nav__link {
+  display: block;
   color: $color-alice-blue;
+  padding: 13px 0;
 }

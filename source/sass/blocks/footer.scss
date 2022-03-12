@@ -1,3 +1,18 @@
 .footer {
   background-color: $color-tangaroa;
+  padding: 50px 0;
+
+  @include vp-767 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }
