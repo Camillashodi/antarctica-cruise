@@ -642,7 +642,7 @@ button,
     padding: 0 32px;
     //padding: 0 103px;
   }
-*/
+  */
 }
 
 .btn {
@@ -849,6 +849,7 @@ button,
   background-image: url("../img/content/header-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 0;
 }
 
 .main-header h1 {
@@ -860,12 +861,53 @@ button,
 .description {
   line-height: 24px;
   color: #011c40;
+  padding: 120px 0;
+}
+
+.description br {
+  display: none;
+}
+
+.description__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+
+.description__column {
+  min-width: 0;
+  min-height: 0;
 }
 
 .description h2 {
   line-height: 42px;
   font-weight: 600;
   font-size: 28px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.description p {
+  margin: 0;
+  padding: 0;
+}
+
+.description p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.description__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 301px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .advantages h2 {
@@ -1063,7 +1105,6 @@ button,
 }
 
 .socials__link {
-  display: block;
   padding: 10px;
   display: -ms-grid;
   display: grid;
@@ -1118,11 +1159,37 @@ button,
   .main-header {
     font-size: 18px;
     line-height: 22px;
+    padding-top: 280px;
+    padding-bottom: 280px;
   }
 
   .main-header h1 {
     font-size: 50px;
     line-height: 61px;
+  }
+
+  .description {
+    padding: 100px 0;
+  }
+
+  .description br {
+    display: inline;
+  }
+
+  .description__container {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .description h2 {
+    margin-bottom: 0;
+    line-height: 36px;
+    font-size: 26px;
+  }
+
+  .description__image img {
+    min-height: 264px;
   }
 
   .footer-nav {
@@ -1168,7 +1235,7 @@ button,
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 15px;
   }
 
   .modal__wrapper {
@@ -1247,7 +1314,7 @@ button,
     outline-style: none;
     border: none;
     background: none;
-    top: 25px;
+    top: 35px;
   }
 
   .main-nav__toggle svg {
@@ -1304,11 +1371,36 @@ button,
   .main-header {
     font-size: 16px;
     line-height: 22px;
+    padding-top: 185px;
+    padding-bottom: 185px;
   }
 
   .main-header h1 {
     font-size: 36px;
     line-height: 45px;
+  }
+
+  .description {
+    padding: 65px 0;
+  }
+
+  .description__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .description h2 {
+    margin-bottom: 0;
+    line-height: 34px;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .description__image img {
+    min-height: 186px;
+    -o-object-position: 50% 35%;
+    object-position: 50% 35%;
   }
 
   .footer {

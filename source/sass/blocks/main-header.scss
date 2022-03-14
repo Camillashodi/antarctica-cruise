@@ -8,15 +8,20 @@
   background-image: url("../img/content/header-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 0;
 
   @include vp-1279 {
     font-size: 18px;
     line-height: 22px;
+    padding-top: 280px;
+    padding-bottom: 280px;
   }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 22px;
+    padding-top: 185px;
+    padding-bottom: 185px;
   }
 }
 
