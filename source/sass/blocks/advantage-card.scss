@@ -2,10 +2,37 @@
   color: $color-tangaroa;
   font-size: 14px;
   line-height: 20px;
+  background-color: $color-alice-blue;
+  padding: 30px;
+  display: grid;
+  grid-template-rows: minmax(32px, max-content) 1fr;
+  row-gap: 25px;
+
+  svg {
+    align-self: center;
+  }
+
+  @include vp-1279 {
+    padding: 25px 20px;
+    padding-right: 15px;
+  }
 }
 
 .advantage-card h3 {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.advantage-card p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

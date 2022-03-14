@@ -862,6 +862,7 @@ button,
   line-height: 24px;
   color: #011c40;
   padding: 120px 0;
+  background-color: #f9fbfd;
 }
 
 .description br {
@@ -910,27 +911,75 @@ button,
   object-fit: cover;
 }
 
+.advantages {
+  padding: 120px 0;
+  background-image: url("../img/content/adventages.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .advantages h2 {
   color: #011c40;
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
 }
 
 .advantages__list {
   list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 .advantage-card {
   color: #011c40;
   font-size: 14px;
   line-height: 20px;
+  background-color: #f9fbfd;
+  padding: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: minmax(32px, -webkit-max-content) 1fr;
+  -ms-grid-rows: minmax(32px, max-content) 1fr;
+  grid-template-rows: minmax(32px, -webkit-max-content) 1fr;
+  grid-template-rows: minmax(32px, max-content) 1fr;
+  row-gap: 25px;
+}
+
+.advantage-card svg {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .advantage-card h3 {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.advantage-card p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.advantage-card p:last-child {
+  margin-bottom: 0;
 }
 
 .catalog h2 {
@@ -1192,6 +1241,21 @@ button,
     min-height: 264px;
   }
 
+  .advantages {
+    padding: 100px 0;
+  }
+
+  .advantages__list {
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .advantage-card {
+    padding: 25px 20px;
+    padding-right: 15px;
+  }
+
   .footer-nav {
     font-size: 12px;
     line-height: 15px;
@@ -1391,7 +1455,6 @@ button,
   }
 
   .description h2 {
-    margin-bottom: 0;
     line-height: 34px;
     font-size: 24px;
     margin-bottom: 30px;
@@ -1401,6 +1464,20 @@ button,
     min-height: 186px;
     -o-object-position: 50% 35%;
     object-position: 50% 35%;
+  }
+
+  .advantages {
+    padding: 65px 0;
+  }
+
+  .advantages h2 {
+    margin-bottom: 40px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
   }
 
   .footer {
