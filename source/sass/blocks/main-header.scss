@@ -3,32 +3,48 @@
   color: $color-alice-blue;
   font-size: 20px;
   line-height: 24px;
-  padding-top: 283px;
-  padding-bottom: 283px;
-  background-image: url("../img/content/header-desktop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 0;
+  position: relative;
+  padding-top: 270px;
+  padding-bottom: 277px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+  }
 
   @include vp-1279 {
     font-size: 18px;
     line-height: 22px;
-    padding-top: 280px;
-    padding-bottom: 280px;
+    padding-top: 268px;
+    padding-bottom: 275px;
   }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 22px;
-    padding-top: 185px;
-    padding-bottom: 185px;
+    padding-top: 175px;
+    padding-bottom: 180px;
   }
+}
+
+.main-header__container {
+  position: relative;
+  padding: 0 155px;
+  z-index: 1;
 }
 
 .main-header h1 {
   font-size: 54px;
   font-weight: 700;
   line-height: 66px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
 
   @include vp-1279 {
     font-size: 50px;
@@ -38,5 +54,14 @@
   @include vp-767 {
     font-size: 36px;
     line-height: 45px;
+  }
+}
+
+.main-header p {
+  margin: 10px;
+  padding: 0;
+
+  &:last-child {
+    margin: 0;
   }
 }

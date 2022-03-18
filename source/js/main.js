@@ -8,6 +8,28 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
+  const navMain = document.querySelector('[data-main-nav]');
+  const navToggle = document.querySelector('[nav-toggle-button]');
+
+  if (navMain && navToggle) {
+    navMain.classList.remove('is-nojs');
+    navToggle.classList.remove('nojs-toggle');
+
+    navToggle.addEventListener('click', function () {
+      if (!navMain.classList.contains('is-open')) {
+        navMain.classList.add('is-open');
+        if (!navToggle.classList.contains('open-toggle')) {
+          navToggle.classList.add('open-toggle');
+        }
+      } else {
+        navMain.classList.remove('is-open');
+        if (navToggle.classList.contains('open-toggle')) {
+          navToggle.classList.remove('open-toggle');
+        }
+      }
+    });
+  }
+
   iosVhFix();
 
   // Modules

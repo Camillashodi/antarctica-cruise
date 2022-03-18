@@ -2,14 +2,99 @@
   font-size: 16px;
   line-height: 24px;
   color: $color-tangaroa;
+  background-color: $color-alice-blue;
+  padding: 120px 0;
+  padding-bottom: 112px;
+
+  @include vp-1279 {
+    padding: 100px 0;
+    padding-bottom: 95px;
+  }
+
+  @include vp-767 {
+    padding: 58px 0;
+    padding-bottom: 65px;
+  }
+}
+
+.contact__container {
+  display: grid;
+  grid-template-columns: 1fr 0.89fr;
+  column-gap: 100px;
+
+  @include vp-1279 {
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact__info {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: center;
+
+  p {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  svg {
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  @include vp-767 {
+    grid-area: 1 / 1 / 2 / 2;
+    margin-bottom: 28px;
+  }
 }
 
 .contact b {
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
+  margin-bottom: 15px;
+
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
 }
 
 .contact a {
   color: inherit;
+}
+
+.contact__map {
+  background-image: url("../img/content/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/content/map@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: 306px;
+
+    @include vp-1279 {
+      height: 335px;
+    }
+
+    @include vp-767 {
+      height: 316px;
+    }
+  }
 }

@@ -8,12 +8,14 @@
   grid-template-columns: min-content 1fr;
   align-items: top;
   width: 1160px;
-  padding-top: 15px;
+  padding-top: 25px;
+  z-index: 2;
 
   @include vp-1279 {
     width: calc(100vw - 90px);
     font-size: 14px;
     line-height: 17px;
+    padding-top: 15px;
   }
 
   @include vp-767 {
@@ -22,41 +24,50 @@
     color: $color-tangaroa;
     font-size: 18px;
     line-height: 22px;
+    padding-top: 0;
   }
+}
 
-  &--open,
-  &--nojs {
-    @include vp-767 {
-      width: 285px;
-      padding: 0 15px;
-      background-color: $color-alice-blue;
-      right: 0;
-      grid-template-columns: 1fr;
-      grid-template-rows: min-content 1fr;
-      row-gap: 33px;
-      min-height: 568px;
+.is-open,
+.is-nojs {
+  @include vp-767 {
+    width: 285px;
+    padding: 0 15px;
+    background-color: $color-alice-blue;
+    right: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+    row-gap: 33px;
+    min-height: 568px;
 
-      .main-nav__list {
-        display: flex;
-      }
+    .main-nav__list {
+      display: flex;
+    }
 
-      path {
-        fill: $color-tangaroa;
-      }
+    path {
+      fill: $color-tangaroa;
     }
   }
+}
 
-  &--nojs {
-    @include vp-767 {
-      position: static;
-    }
+.is-nojs {
+  @include vp-767 {
+    position: static;
+    min-height: 0;
   }
 }
 
 .main-nav__logo {
   width: 70px;
   height: 38px;
-  margin-top: 20px;
+  margin-top: 10px;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
 
   @include vp-1279 {
     width: 38px;
@@ -93,16 +104,19 @@
   @include vp-767 {
     display: block;
     position: absolute;
-    right: 15px;
+    right: 0;
     width: 24px;
     height: 12px;
     outline-style: none;
     border: none;
     background: none;
-    top: 35px;
+    top: 25px;
 
     svg {
       display: none;
+      position: absolute;
+      right: 15px;
+      top: 0;
     }
 
     &::after {
@@ -117,23 +131,23 @@
         0 6px $color-alice-blue;
     }
   }
+}
 
-  &--open {
-    @include vp-767 {
-      svg {
-        display: block;
-      }
-
-      &::after {
-        display: none;
-      }
+.open-toggle {
+  @include vp-767 {
+    svg {
+      display: block;
     }
-  }
 
-  &--nojs {
-    @include vp-767 {
+    &::after {
       display: none;
     }
+  }
+}
+
+.nojs-toggle {
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -162,7 +176,7 @@
 
   @include vp-767 {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 }
 
@@ -170,6 +184,13 @@
   color: $color-alice-blue;
   padding: 20px 0;
   display: block;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
 
   @include vp-767 {
     color: $color-tangaroa;

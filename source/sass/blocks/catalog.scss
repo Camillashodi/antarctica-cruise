@@ -1,13 +1,15 @@
 .catalog {
-  padding: 120px 0;
+  padding: 110px 0;
+  padding-bottom: 120px;
   background-color: $color-alice-blue;
 
   @include vp-1279 {
-    padding: 100px 0;
+    padding: 90px 0;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding: 65px 0;
+    padding: 58px 0;
   }
 }
 
@@ -19,7 +21,18 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+
+  @include vp-1279 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
 }
 
 .catalog__list {
@@ -37,5 +50,6 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    padding: 0 10px;
   }
 }
