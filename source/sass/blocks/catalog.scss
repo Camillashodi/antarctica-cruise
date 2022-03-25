@@ -10,6 +10,7 @@
 
   @include vp-767 {
     padding: 58px 0;
+    padding-bottom: 64px;
   }
 }
 
@@ -45,6 +46,10 @@
   row-gap: 30px;
 
   @include vp-1279 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @include vp-1023 {
     grid-template-columns: 1fr 1fr;
   }
 

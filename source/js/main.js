@@ -9,7 +9,27 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   const navMain = document.querySelector('[data-main-nav]');
-  const navToggle = document.querySelector('[nav-toggle-button]');
+  const navToggle = document.querySelector('[data-nav-toggle]');
+  const body = document.querySelector('[data-page-body]');
+  const navLinks = document.querySelectorAll('[data-main-nav-link]');
+
+  const closeNav = function () {
+    if (navMain.classList.contains('is-open')) {
+      navMain.classList.remove('is-open');
+      if (body) {
+        body.style.position = 'static';
+      }
+      if (navToggle.classList.contains('open-toggle')) {
+        navToggle.classList.remove('open-toggle');
+      }
+    }
+
+    if (navLinks.length !== 0) {
+      navLinks.forEach((navLink) => {
+        navLink.removeEventListener('click', closeNav);
+      });
+    }
+  };
 
   if (navMain && navToggle) {
     navMain.classList.remove('is-nojs');
@@ -18,14 +38,26 @@ window.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', function () {
       if (!navMain.classList.contains('is-open')) {
         navMain.classList.add('is-open');
+        if (body) {
+          body.style.position = 'fixed';
+        }
         if (!navToggle.classList.contains('open-toggle')) {
           navToggle.classList.add('open-toggle');
         }
       } else {
         navMain.classList.remove('is-open');
+        if (body) {
+          body.style.position = 'static';
+        }
         if (navToggle.classList.contains('open-toggle')) {
           navToggle.classList.remove('open-toggle');
         }
+      }
+
+      if (navLinks.length !== 0) {
+        navLinks.forEach((navLink) => {
+          navLink.addEventListener('click', closeNav);
+        });
       }
     });
   }

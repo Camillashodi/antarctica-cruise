@@ -1,4 +1,16 @@
-.main-nav {
+.main-nav.is-open {
+  @include vp-767 {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-prussian-blue, 0.5);
+    z-index: 10;
+  }
+}
+
+.main-nav__wrapper {
   font-weight: 500;
   line-height: 20px;
   color: $color-alice-blue;
@@ -7,11 +19,12 @@
   display: grid;
   grid-template-columns: min-content 1fr;
   align-items: top;
-  width: 1160px;
+  width: calc(100vw - 120px);
+  max-width: 1160px;
   padding-top: 25px;
-  z-index: 2;
+  z-index: 11;
 
-  @include vp-1279 {
+  @include vp-1023 {
     width: calc(100vw - 90px);
     font-size: 14px;
     line-height: 17px;
@@ -28,10 +41,12 @@
   }
 }
 
-.is-open,
-.is-nojs {
+.is-open .main-nav__wrapper,
+.is-nojs .main-nav__wrapper {
   @include vp-767 {
-    width: 285px;
+    //width: 285px;
+    width: calc(100vw - 35px);
+    max-width: 350px;
     padding: 0 15px;
     background-color: $color-alice-blue;
     right: 0;
@@ -50,7 +65,7 @@
   }
 }
 
-.is-nojs {
+.is-nojs .main-nav__wrapper {
   @include vp-767 {
     position: static;
     min-height: 0;
@@ -69,7 +84,7 @@
     }
   }
 
-  @include vp-1279 {
+  @include vp-1023 {
     width: 38px;
     height: 20px;
     margin-top: 15px;
@@ -87,7 +102,7 @@
     fill: $color-alice-blue;
   }
 
-  @include vp-1279 {
+  @include vp-1023 {
     width: 38px;
     height: 20px;
   }
@@ -170,8 +185,8 @@
 .main-nav__item {
   margin-left: 33px;
 
-  @include vp-1279 {
-    margin-left: 23px;
+  @include vp-1023 {
+    margin-left: 24px;
   }
 
   @include vp-767 {
@@ -190,6 +205,10 @@
     &:focus {
       opacity: 0.8;
     }
+  }
+
+  @include vp-1023 {
+    padding: 17px 0;
   }
 
   @include vp-767 {

@@ -1,12 +1,13 @@
 .booking {
   color: $color-tangaroa;
+  background-color: $color-pattens-blue;
   font-size: 18px;
   line-height: 27px;
   padding: 50px 0;
   position: relative;
 
-  @include vp-1279 {
-    padding: 87px 0;
+  @include vp-1023 {
+    padding: 88px 0;
     padding-bottom: 100px;
   }
 
@@ -34,6 +35,11 @@
   z-index: 1;
 
   @include vp-1279 {
+    padding: 0 80px;
+    column-gap: 100px;
+  }
+
+  @include vp-1023 {
     grid-template-columns: minmax(290px, 419px);
     justify-content: center;
   }
@@ -42,11 +48,17 @@
 .booking__text {
   align-self: center;
 
-  @include vp-1279 {
+  p {
+    max-width: 352px;
+  }
+
+  @include vp-1023 {
     margin-bottom: 53px;
 
     p {
-      margin: 0 38px;
+      margin: 0 36px;
+      text-align: center;
+      max-width: 372px;
     }
   }
 
@@ -69,10 +81,11 @@
   padding: 0;
   margin-bottom: 15px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     font-size: 34px;
     line-height: 51px;
     margin-bottom: 5px;
+    text-align: center;
   }
 
   @include vp-767 {
@@ -82,7 +95,7 @@
   }
 }
 
-p {
+.booking p {
   padding: 0;
   margin: 0;
 }

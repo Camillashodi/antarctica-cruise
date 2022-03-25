@@ -2,6 +2,7 @@
   padding: 110px 0;
   padding-bottom: 120px;
   background-image: url("../img/content/adventages.jpg");
+  background-color: $color-pattens-blue;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -11,7 +12,7 @@
     background-size: cover;
   }
 
-  @include vp-1279 {
+  @include vp-1023 {
     padding: 90px 0;
     padding-bottom: 100px;
   }
@@ -32,7 +33,7 @@
   padding: 0;
   margin-bottom: 50px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     font-size: 26px;
     line-height: 39px;
   }
@@ -49,10 +50,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
+  row-gap: 40px;
   padding: 0;
   margin: 0;
 
-  @include vp-1279 {
+  @include vp-1023 {
     column-gap: 30px;
   }
 

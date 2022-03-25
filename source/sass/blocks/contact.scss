@@ -4,16 +4,16 @@
   color: $color-tangaroa;
   background-color: $color-alice-blue;
   padding: 120px 0;
-  padding-bottom: 112px;
+  padding-bottom: 113px;
 
-  @include vp-1279 {
-    padding: 100px 0;
+  @include vp-1023 {
+    padding: 98px 0;
     padding-bottom: 95px;
   }
 
   @include vp-767 {
     padding: 58px 0;
-    padding-bottom: 65px;
+    padding-bottom: 67px;
   }
 }
 
@@ -22,7 +22,7 @@
   grid-template-columns: 1fr 0.89fr;
   column-gap: 100px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     column-gap: 30px;
     grid-template-columns: 1fr 1fr;
   }

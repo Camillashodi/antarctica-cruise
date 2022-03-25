@@ -10,7 +10,7 @@
 .socials__item {
   margin-left: 33px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     margin-left: 23px;
   }
 
@@ -34,27 +34,27 @@
     }
   }
 
-  @include vp-1279 {
+  @include vp-1023 {
     padding: 10px 0;
-    padding-top: 12px;
+    padding-top: 8px;
   }
 
   &--fb svg {
-    @include vp-1279 {
+    @include vp-1023 {
       width: 9px;
       height: 16px;
     }
   }
 
   &--inst svg {
-    @include vp-1279 {
+    @include vp-1023 {
       width: 16px;
       height: 16px;
     }
   }
 
   &--twitter svg {
-    @include vp-1279 {
+    @include vp-1023 {
       width: 16px;
       height: 13px;
     }
