@@ -949,6 +949,8 @@ button,
   max-height: 301px;
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: 0 50%;
+  object-position: 0 50%;
 }
 
 .advantages {
@@ -1735,12 +1737,25 @@ button,
     font-size: 26px;
   }
 
+  .description__image {
+    overflow: hidden;
+    width: 100%;
+    height: 264px;
+    position: relative;
+  }
+
   .description__image img {
-    min-height: 264px;
+    max-height: 264px;
+    max-width: 491px;
+    height: 264px;
+    min-width: 411px;
+    width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: 51% 0;
-    object-position: 51% 0;
+    -o-object-position: 0 50%;
+    object-position: 0 50%;
+    position: absolute;
+    right: -44px;
   }
 
   .advantages {
@@ -2091,8 +2106,17 @@ button,
     max-width: 100%;
   }
 
+  .description__image {
+    height: auto;
+  }
+
   .description__image img {
     min-height: 186px;
+    max-height: auto;
+    height: auto;
+    min-width: 100%;
+    width: 100%;
+    position: static;
     -o-object-position: 50% 35%;
     object-position: 50% 35%;
   }

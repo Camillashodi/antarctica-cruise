@@ -81,21 +81,45 @@
 }
 
 .description__image {
+  @include vp-1023 {
+    overflow: hidden;
+    width: 100%;
+    height: 264px;
+    position: relative;
+  }
+
+  @include vp-767 {
+    height: auto;
+  }
+
   img {
     display: block;
     width: 100%;
     height: auto;
     max-height: 301px;
     object-fit: cover;
+    object-position: 0 50%;
 
     @include vp-1023 {
-      min-height: 264px;
+      //min-height: 264px;
+      max-height: 264px;
+      max-width: 491px;
+      height: 264px;
+      min-width: 411px;
+      width: 100%;
       object-fit: cover;
-      object-position: 51% 0;
+      object-position: 0 50%;
+      position: absolute;
+      right: -44px;
     }
 
     @include vp-767 {
       min-height: 186px;
+      max-height: auto;
+      height: auto;
+      min-width: 100%;
+      width: 100%;
+      position: static;
       object-position: 50% 35%;
     }
   }
