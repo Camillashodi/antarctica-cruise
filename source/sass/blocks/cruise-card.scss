@@ -13,6 +13,10 @@
     color: $color-alice-blue;
   }
 
+  picture {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+
   img {
     grid-area: 1 / 1 / 3 / 2;
     max-height: 100%;
