@@ -1,17 +1,19 @@
 .advantages {
   padding: 110px 0;
   padding-bottom: 120px;
-  background-image: url("../img/content/adventages.jpg");
+  position: relative;
+  /*
+  background-image: url("../1img/content/adventages.jpg");
   background-color: $color-pattens-blue;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/content/adventages@2x.jpg");
+    background-image: url("../1img/content/adventages@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
-
+*/
   @include vp-1023 {
     padding: 90px 0;
     padding-bottom: 100px;
@@ -20,6 +22,18 @@
   @include vp-767 {
     padding: 57px 0;
     padding-bottom: 65px;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+    background-color: $color-pattens-blue;
   }
 }
 
