@@ -949,8 +949,8 @@ button,
   max-height: 301px;
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: 0 50%;
-  object-position: 0 50%;
+  -o-object-position: 0 45%;
+  object-position: 0 45%;
 }
 
 .advantages {
@@ -1095,6 +1095,7 @@ button,
   grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
   height: 386px;
+  position: relative;
 }
 
 .cruise-card th {
@@ -1237,6 +1238,8 @@ button,
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
+  z-index: 0;
+  position: relative;
 }
 
 .booking {
@@ -1275,6 +1278,7 @@ button,
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  padding-bottom: 8px;
 }
 
 .booking__text p {
@@ -1287,7 +1291,7 @@ button,
   line-height: 60px;
   margin: 0;
   padding: 0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .booking p {
@@ -1440,7 +1444,7 @@ button,
   color: #011c40;
   background-color: #f9fbfd;
   padding: 120px 0;
-  padding-bottom: 113px;
+  padding-bottom: 120px;
 }
 
 .contact__container {
@@ -1461,6 +1465,7 @@ button,
   grid-area: 1 / 2 / 2 / 3;
   -ms-grid-row-align: center;
   align-self: center;
+  padding-bottom: 0;
 }
 
 .contact__info p {
@@ -1471,7 +1476,7 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   padding: 0;
 }
 
@@ -1489,7 +1494,7 @@ button,
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .contact a {
@@ -1498,17 +1503,6 @@ button,
 
 .contact__map {
   position: relative;
-  /*
-  background-image: url("../1img/content/map.png");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../1img/content/map@2x.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-*/
 }
 
 .contact__map img {
@@ -1803,13 +1797,13 @@ button,
     max-width: 491px;
     height: 264px;
     min-width: 411px;
-    width: 100%;
+    width: 264px;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: 0 50%;
     object-position: 0 50%;
     position: absolute;
-    right: -44px;
+    right: -40px;
   }
 
   .advantages {
@@ -1886,6 +1880,7 @@ button,
 
   .booking__text {
     margin-bottom: 53px;
+    padding-bottom: 0;
   }
 
   .booking__text p {
@@ -1914,7 +1909,7 @@ button,
 
   .contact {
     padding: 98px 0;
-    padding-bottom: 95px;
+    padding-bottom: 102px;
   }
 
   .contact__container {
@@ -1923,6 +1918,18 @@ button,
     column-gap: 30px;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__info {
+    padding-top: 5px;
+  }
+
+  .contact__info svg {
+    margin-top: 3px;
+  }
+
+  .contact b {
+    margin-bottom: 5px;
   }
 
   .footer {
@@ -2240,7 +2247,7 @@ button,
   }
 
   .booking__text p {
-    margin: 0 17px;
+    margin: 0 6px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -2290,6 +2297,8 @@ button,
     -ms-grid-column-span: 1;
     grid-area: 1 / 1 / 2 / 2;
     margin-bottom: 28px;
+    padding-top: 0;
+    padding-bottom: 5px;
   }
 
   .contact b {
@@ -2313,7 +2322,7 @@ button,
   .footer-nav {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .footer-nav__logo {

@@ -98,7 +98,7 @@
     height: auto;
     max-height: 301px;
     object-fit: cover;
-    object-position: 0 50%;
+    object-position: 0 45%;
 
     @include vp-1023 {
       //min-height: 264px;
@@ -106,11 +106,11 @@
       max-width: 491px;
       height: 264px;
       min-width: 411px;
-      width: 100%;
+      width: 264px;
       object-fit: cover;
       object-position: 0 50%;
       position: absolute;
-      right: -44px;
+      right: -40px;
     }
 
     @include vp-767 {

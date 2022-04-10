@@ -47,6 +47,7 @@
 
 .booking__text {
   align-self: center;
+  padding-bottom: 8px;
 
   p {
     max-width: 352px;
@@ -54,6 +55,7 @@
 
   @include vp-1023 {
     margin-bottom: 53px;
+    padding-bottom: 0;
 
     p {
       margin: 0 36px;
@@ -66,7 +68,7 @@
     margin-bottom: 33px;
 
     p {
-      margin: 0 17px;
+      margin: 0 6px;
       font-size: 16px;
       line-height: 22px;
     }
@@ -79,7 +81,7 @@
   line-height: 60px;
   margin: 0;
   padding: 0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 
   @include vp-1023 {
     font-size: 34px;
