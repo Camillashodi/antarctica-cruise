@@ -38,6 +38,11 @@ window.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', function () {
       if (!navMain.classList.contains('is-open')) {
         navMain.classList.add('is-open');
+        navMain.addEventListener('click', function (evt) {
+          if (evt.target === navMain) {
+            closeNav();
+          }
+        });
         if (body) {
           body.style.position = 'fixed';
         }
